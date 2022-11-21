@@ -30,7 +30,7 @@ router.post("/postComment/:id", fetchUser, async (req, res) => {
         const { comment } = req.body
 
         const  safe = await axios.post(
-            'http://20.97.134.74/',
+            'https://nlp-aics.onrender.com',
             {
                 body: JSON.stringify({comment}),
                 headers: {
@@ -66,7 +66,7 @@ router.put("/updateComment/:commentid", fetchUser, async (req, res) => {
         if (foundComment.username != user.username) return res.status(401).json({ msg: "illegal operation" })
 
         const  safe = await axios.post(
-            'http://localhost:7000/',
+            'https://nlp-aics.onrender.com',
             {
                 body: JSON.stringify({comment}),
                 headers: {
