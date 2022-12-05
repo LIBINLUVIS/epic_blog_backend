@@ -30,7 +30,7 @@ router.post("/postComment/:id", fetchUser, async (req, res) => {
         const { comment } = req.body
 
         const  safe = await axios.post(
-            'https://nlp-aics.onrender.com',
+            'https://web-production-9baf.up.railway.app/',
             {
                 body: JSON.stringify({comment}),
                 headers: {
